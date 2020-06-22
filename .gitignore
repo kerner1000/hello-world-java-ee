@@ -1,4 +1,11 @@
+## Maven
+**/target/
 ## IntelliJ
 *.iws
+**/*.iml
 **/.idea/*
-/out/
+**/out/
+## Eclipse
+*.project
+.settings
+**/.classpath
