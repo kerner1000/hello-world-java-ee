@@ -9,12 +9,44 @@
     <version>1.0-SNAPSHOT</version>
     <packaging>pom</packaging>
 
+    <developers>
+        <developer>
+            <name>Alexander Kerner</name>
+            <url>http://kerner1000.github.io</url>
+        </developer>
+    </developers>
+
+    <licenses>
+
+    </licenses>
+
     <properties>
         <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
         <maven.compiler.source>1.8</maven.compiler.source>
         <maven.compiler.target>1.8</maven.compiler.target>
+        <github-user>kerner1000</github-user>
+        <github-repo>javaee-helloworld</github-repo>
     </properties>
 
+    <issueManagement>
+        <system>GitHub</system>
+        <url>https://github.com/kerner1000/javaee-helloworld/issues</url>
+    </issueManagement>
+
+    <scm>
+        <connection>scm:git:https://github.com/${github-user}/${github-repo}.git</connection>
+        <developerConnection>scm:git:git@github.com:${github-user}/${github-repo}.git</developerConnection>
+        <url>https://github.com/${github-user}/${github-repo}</url>
+        <tag>HEAD</tag>
+    </scm>
+
+    <distributionManagement>
+        <repository>
+            <id>local-release-repo</id>
+            <name>alex-local</name>
+            <url>file://${user.home}/local-maven-repository</url>
+        </repository>
+    </distributionManagement>
 
     <build>
         <pluginManagement><!-- lock down plugins versions to avoid using Maven defaults (may be moved to parent pom) -->
