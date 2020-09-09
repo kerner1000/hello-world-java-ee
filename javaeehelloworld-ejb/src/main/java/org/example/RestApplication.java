@@ -1,7 +1,5 @@
 package org.example;
 
-import org.example.batch.hauptbuchueberleitung.HauptbuchueberleitungVorbereitung;
-import org.example.ws.AuthInterceptor;
 import org.example.ws.BatchJobService;
 import org.example.ws.CorsInterceptor;
 import org.slf4j.Logger;
@@ -19,7 +17,7 @@ import java.util.Set;
 @ApplicationPath("/api/v1")
 public class RestApplication extends Application {
 
-    private static final Logger logger = LoggerFactory.getLogger(HauptbuchueberleitungVorbereitung.class);
+    private static final Logger logger = LoggerFactory.getLogger(RestApplication.class);
 
     private static final Marker flow = MarkerFactory.getMarker("FLOW");
 
