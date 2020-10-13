@@ -25,6 +25,8 @@
                         <defaultLibBundleDir>lib</defaultLibBundleDir>
                         <generateModuleId>true</generateModuleId>
                         <generateApplicationXml>false</generateApplicationXml>
+                        <!-- eliminates use of version in EAR JNDI name portion -->
+                        <applicationName>${project.artifactId}</applicationName>
                         <modules>
                             <webModule>
                                 <groupId>${project.groupId}</groupId>
@@ -35,12 +37,13 @@
                                     /helloworld
                                 </contextRoot>
                             </webModule>
-                            <ejbModule>
-                                <groupId>${project.groupId}</groupId>
-                                <artifactId>
-                                    helloworld-ejb
-                                </artifactId>
-                            </ejbModule>
+                                <!-- eliminates use of the version in the EJB JNDI name -->
+<!--                            <ejbModule>-->
+<!--                                <groupId>${project.groupId}</groupId>-->
+<!--                                <artifactId>-->
+<!--                                    helloworld-ejb-->
+<!--                                </artifactId>-->
+<!--                            </ejbModule>-->
                         </modules>
                         <archive>
                             <!-- Don't forget the Implementation Version -->
@@ -66,7 +69,6 @@
         <dependency>
             <groupId>org.example</groupId>
             <artifactId>helloworld-ejb</artifactId>
-            <type>ejb</type>
             <version>1.0-SNAPSHOT</version>
         </dependency>
         <dependency>
